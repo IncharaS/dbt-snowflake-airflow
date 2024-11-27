@@ -12,14 +12,14 @@ The environment is configured on **Windows** using **WSL (Windows Subsystem for 
 
 ### **Use Case**
 
-The pipeline is tailored for a sample **e-commerce or supply chain domain** using transactional datasets from TPCH (e.g., `orders`, `lineitem`, `customer`, `parts`). It transforms raw data into structured staging, intermediate, and fact tables, enabling insights such as customer behavior, sales trends, and inventory optimization.
+The pipeline is tailored for a sample **e-commerce or supply chain domain** using transactional datasets from TPCH (e.g., `orders`, `lineitem`, `customer`). It transforms raw data into structured staging, intermediate, and fact tables, enabling insights such as customer behavior, sales trends, and inventory optimization.
 
 ---
 
 ### **Key Features**
 
 1. **Raw Data Ingestion**  
-   - Pulls transactional data from the **TPCH Snowflake sample database**, including tables like `orders`, `lineitem`, `customer`, and `parts`.
+   - Pulls transactional data from the **TPCH Snowflake sample database**, including tables like `orders`, `lineitem`, `customer`.
 
 2. **Data Cleaning and Transformation**  
    - Cleans and standardizes data, such as validating email formats, handling null values, and calculating fields like `discounted_amount` or `tax_included_price`.  

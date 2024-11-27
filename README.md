@@ -1,3 +1,120 @@
+### **Project Title: Scalable Data Transformation Pipeline for TPCH Analytics Using DBT, Airflow, and Docker**
+
+---
+
+### **Project Overview**
+
+This project demonstrates a robust **data transformation and analytics pipeline** designed to process and transform transactional data from the **TPCH Snowflake sample database**. Using **DBT (Data Build Tool)** for programmatic data transformations, **Airflow** for orchestration, and **Docker** for containerized deployment, the pipeline delivers analytics-ready tables optimized for business intelligence (BI) and reporting.
+
+The environment is configured on **Windows** using **WSL (Windows Subsystem for Linux)** to run a Linux-based setup. It incorporates Ubuntu, Docker, and Airflow to ensure seamless integration for data engineering workflows.
+
+---
+
+### **Use Case**
+
+The pipeline is tailored for a sample **e-commerce or supply chain domain** using transactional datasets from TPCH (e.g., `orders`, `lineitem`, `customer`, `parts`). It transforms raw data into structured staging, intermediate, and fact tables, enabling insights such as customer behavior, sales trends, and inventory optimization.
+
+---
+
+### **Key Features**
+
+1. **Raw Data Ingestion**  
+   - Pulls transactional data from the **TPCH Snowflake sample database**, including tables like `orders`, `lineitem`, `customer`, and `parts`.
+
+2. **Data Cleaning and Transformation**  
+   - Cleans and standardizes data, such as validating email formats, handling null values, and calculating fields like `discounted_amount` or `tax_included_price`.  
+   - Transforms raw data into dimensions and metrics (e.g., `gross_item_sales_amount`, `total_price_with_tax`).
+
+3. **Data Aggregation**  
+   - Aggregates metrics at various granularities, such as:  
+     - **Order-level**: Summing up sales and discounts.  
+     - **Customer-level**: Total purchases and tax contributions.
+
+4. **Business Metric Enrichment**  
+   - Computes advanced metrics like **discounted amounts**, **tax-inclusive prices**, and **surrogate keys** for analytics-ready data.
+
+5. **Model Creation**  
+   - Produces:  
+     - **Staging Models**: Cleans raw data for downstream processing.  
+     - **Intermediate Models**: Joins datasets and applies business rules.  
+     - **Fact Tables**: Finalized tables for BI dashboards.
+
+6. **Automated Data Quality Checks**  
+   - Employs rigorous tests for:  
+     - **Primary Key Uniqueness**  
+     - **Foreign Key Integrity**  
+     - **Data Type Validation**
+
+7. **Airflow Orchestration**  
+   - Configures DAGs in **Airflow** to automate DBT tasks on a schedule, ensuring timely and consistent transformations.
+
+---
+
+### **Real-World Applications**
+
+1. **Revenue and Order Analytics**  
+   - Calculate revenue, taxes, and discounts across customers, products, and time periods.  
+   - Identify top customers and high-performing products.
+
+2. **Inventory and Supply Chain Optimization**  
+   - Track sales trends for inventory planning and demand forecasting.  
+   - Analyze part usage from the `lineitem` table to streamline supply chain operations.
+
+3. **Customer Insights**  
+   - Profile customers based on purchasing behavior and lifetime value.  
+   - Validate customer data (e.g., email verification) for targeted marketing.
+
+4. **Data-Driven Decision Making**  
+   - Enables monitoring of KPIs such as sales performance and discount utilization.  
+   - Provides a foundation for predictive analytics (e.g., demand forecasting).
+
+---
+
+### **Project Architecture**
+
+| **Component**               | **Description**                                                                                           |
+|-----------------------------|----------------------------------------------------------------------------------------------------------|
+| **Staging Models**          | Organizes raw data into structured formats for easier downstream transformations.                        |
+| **Intermediate Models**     | Applies joins, aggregations, and business logic to prepare enriched datasets.                            |
+| **Fact Tables**             | Stores analytics-ready data with key metrics and dimensions for BI tools.                               |
+| **Macros**                  | Modularized transformation logic for consistency and reusability across models.                         |
+| **Tests**                   | Ensures data quality at every stage with automated checks for accuracy, integrity, and completeness.     |
+| **Airflow DAGs**            | Automates DBT commands and schedules transformations for timely data updates.                           |
+| **Docker**                  | Containerizes the environment for portability and reproducibility across systems.                        |
+
+---
+
+### **Technology Stack**
+
+1. **DBT**: Core data transformation tool.  
+2. **Airflow**: Workflow orchestration for automating DBT tasks.  
+3. **Docker**: Containerization for deploying the pipeline in any environment.  
+4. **Snowflake**: Cloud data warehouse for hosting the TPCH sample dataset.  
+5. **Ubuntu (via WSL)**: Base environment for local development on Windows.
+
+---
+
+### **Workflow Diagram**
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/150c96cc-bed6-4a9a-8d19-291723fff400">
+
+
+---
+
+### **Value Proposition**
+
+This project exemplifies a **scalable data engineering solution** for transforming and analyzing transactional datasets. By integrating cutting-edge tools like DBT and Airflow, it offers:  
+- Structured workflows for data cleaning and transformation.  
+- Reliable and tested data pipelines.  
+- Ready-to-use analytics tables for decision-making.
+
+The pipeline is an excellent demonstration of how modern data engineering tools can simplify and enhance complex analytics workflows, ensuring businesses derive actionable insights from their data. 
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Overview
 ========
 
